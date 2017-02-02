@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+
+        <li class="active">
+          <a [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/cadastro']">Cadastro </a>
+        </li>
+        <li>
+          <a [routerLink]="['/detalhes']">Detalhes </a>
+        </li>
+        <!--
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Cadastro</a></li>
+        <li><a href="#">Detalhes</a></li>
+        -->
+      </ul>
+    </div>
+
+    <router-outlet></router-outlet>
+    <!--<app-dashboard></app-dashboard>-->
+
+  </div>
+</div>

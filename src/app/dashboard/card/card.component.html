@@ -1,0 +1,9 @@
+<div class="col-xs-6 col-sm-3 placeholder">
+  <a href="#" [routerLink]="['/main/detalhes/', id] ">
+    <img src="{{urlImagem}}" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+  </a>
+  <h4>
+    <a (click)="enviarTitulo()" href="#">{{titulo}}</a>
+  </h4>
+  <span class="text-muted">Descrição do Livro</span>
+</div>
