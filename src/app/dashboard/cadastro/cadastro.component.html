@@ -1,9 +1,36 @@
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
   <div class="row">
-
+  
   <h2 class="sub-header">Cadastro de Livros</h2>
-    <div class="table-responsive">    
+    <div class="container">
+      <div class="row">
+        <form [formGroup]="formModel" (ngSubmit)="cadastrarLivro()" class="col-sm-12">
+          <div class="row">
+            <fieldset class="col-md-6">        
+              <div class="form-group">
+                <label id="codigo">Código</label>
+                <input formControlName="codigo" class="form-control" type="number" name="livro-codigo" placeholder="Código" autofocus>
+              </div>              
+              <div class="form-group">
+                <label id="titulo" >Titulo</label>
+                <input formControlName="titulo" class="form-control" type="text" name="livro-titulo" placeholder="Título">
+              </div>
+              <div class="form-group">
+                <label id="urlImg" >Imagem</label>
+                <input formControlName="urlImagem" class="form-control" type="text" name="livro-url-imagem" placeholder="URL da capa">
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit" class="btn btn-primary pull-left">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            Incluir
+          </button>
+        </form>
+      </div>
+    </div>
 
+  <h2 class="sub-header">Livros Cadastrados</h2>
+    <div class="table-responsive">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -19,6 +46,5 @@
         </tbody>
       </table>
     </div>
-    
   </div>
 </div>
