@@ -14,5 +14,9 @@ export class LoginComponent {
   logar() {
       sessionStorage.setItem('logado', 'true');
       this._router.navigate(['']);
-    }
+  }
+
+  tratarFormulario(value) {
+    alert('Este é o valor: ' + value);
+  }
 }
