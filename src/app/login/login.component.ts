@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,14 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   dataAtual = Date.now();
 
-  constructor(private _router: Router) { }
-
-  logar() {
-      sessionStorage.setItem('logado', 'true');
-      this._router.navigate(['']);
-  }
+  constructor(private _router: Router, private _lService: LoginService) { }
 
   tratarFormulario(value) {
-    alert('Este é o valor: ' + value);
+    const isLogado = this._lService.logar(value.loginname, value.password);
+
+    if (isLogado) {
+      this._router.navigate(['/main/home']);
+      return true;
+    }
   }
 }

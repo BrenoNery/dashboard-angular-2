@@ -13,6 +13,7 @@ import { BibliotecaService } from './service/biblioteca';
 import { AutorService } from './service/autor.service';
 import { EditoraService } from './service/editora.service';
 import { LivroService } from './service/livro.service';
+import { LoginService } from './service/login.service';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -40,7 +41,8 @@ import { LoginCanActivate } from './login/login.activate';
     AutorService,
     EditoraService,
     LivroService,
-    LoginCanActivate
+    LoginCanActivate,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

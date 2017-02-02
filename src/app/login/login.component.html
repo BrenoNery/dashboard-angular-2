@@ -3,11 +3,11 @@
     <div class="col-sm-6 col-md-4 col-md-offset-4">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <strong> Sign in to continue</strong>
+          <strong> Fça Login para continuar</strong>
         </div>
         <div class="panel-body">
           <!--<form role="form" action="" method="" novalidate>-->
-          <form #f="ngForm" (ngSubmit)="tratarFormulario(f.value)">
+          <form #f="ngForm" (ngSubmit)="tratarFormulario(f.value)" novalidate>
             <fieldset>
               <div class="row">
                 <div class="center-block">
@@ -21,7 +21,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-user"></i>
                       </span> 
-                      <input ng-model class="form-control" placeholder="Username" name="loginname" type="text" autofocus>
+                      <input ngModel class="form-control" placeholder="Usuário / E-mail" name="loginname" type="text" autofocus>
                     </div>
                   </div>
                   <div class="form-group">
@@ -29,7 +29,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-lock"></i>
                       </span>
-                      <input ng-model class="form-control" placeholder="Password" name="password" type="password" value="">
+                      <input ngModel class="form-control" placeholder="Senha" name="password" type="password" value="">
                     </div>
                   </div>
 
@@ -40,16 +40,18 @@
                   </div>
 
                   <div class="form-group">
-                    <input ng-model type="button" (click)="logar()" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Entrar">
                   </div>
                 </div>
               </div>
             </fieldset>
           </form>
         </div>
+        <!--
         <div class="panel-footer ">
           Don't have an account! <a href="#" onClick=""> Sign Up Here </a>
         </div>
+        -->
       </div>
     </div>
   </div>
