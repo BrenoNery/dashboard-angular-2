@@ -4,6 +4,7 @@ import { CadastroComponent } from './dashboard/cadastro/cadastro.component';
 import { DetalhesComponent } from './dashboard/detalhes/detalhes.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
+import { WebsocketComponent } from './dashboard/websocket/websocket.component';
 import { LoginCanActivate } from './login/login.activate';
 
 export const rotas: Routes = [
@@ -12,7 +13,8 @@ export const rotas: Routes = [
         children: [
             { path: 'home', component: DashboardComponent },
             { path: 'cadastro', component: CadastroComponent },
-            { path: 'detalhes/:id', component: DetalhesComponent }
+            { path: 'detalhes/:id', component: DetalhesComponent },
+            { path: 'websocket', component: WebsocketComponent }
         ]
     },
     { path: '', component: MainComponent, canActivate: [LoginCanActivate],
@@ -20,7 +22,8 @@ export const rotas: Routes = [
             { path: '', component: DashboardComponent },
             { path: 'home', component: DashboardComponent },
             { path: 'cadastro', component: CadastroComponent },
-            { path: 'detalhes', component: DetalhesComponent }
+            { path: 'detalhes', component: DetalhesComponent },
+            { path: 'websocket', component: WebsocketComponent }
         ]
     }
 ];

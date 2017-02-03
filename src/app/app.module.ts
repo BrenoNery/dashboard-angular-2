@@ -16,6 +16,7 @@ import { LivroService } from './service/livro.service';
 import { LoginService } from './service/login.service';
 import { LivrosRESTService } from './service/livros.rest.service';
 import { LoginRESTService } from './service/login.rest.service';
+import { WebSocketService } from './service/websocket.service';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -48,7 +49,8 @@ import { LoginDirective } from './directives/login/login.directive';
     LoginCanActivate,
     LoginService,
     LivrosRESTService,
-    LoginRESTService
+    LoginRESTService,
+    WebSocketService
   ],
   bootstrap: [AppComponent]
 })

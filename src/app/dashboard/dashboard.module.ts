@@ -6,23 +6,27 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { RouterModule } from '@angular/router';
+import { WebsocketComponent } from './websocket/websocket.component';
 
 @NgModule({
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     DashboardComponent,
     DetalhesComponent,
     CadastroComponent,
-    CardComponent
+    CardComponent,
+    WebsocketComponent
   ],
   exports: [
     DashboardComponent,
     DetalhesComponent,
-    CadastroComponent
+    CadastroComponent,
+    WebsocketComponent
   ]
 })
 export class DashboardModule { }
