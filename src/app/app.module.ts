@@ -14,18 +14,22 @@ import { AutorService } from './service/autor.service';
 import { EditoraService } from './service/editora.service';
 import { LivroService } from './service/livro.service';
 import { LoginService } from './service/login.service';
+import { LivrosRESTService } from './service/livros.rest.service';
+import { LoginRESTService } from './service/login.rest.service';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 
 import { LoginCanActivate } from './login/login.activate';
+import { LoginDirective } from './directives/login/login.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    LoginDirective
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { LoginCanActivate } from './login/login.activate';
     EditoraService,
     LivroService,
     LoginCanActivate,
-    LoginService
+    LoginService,
+    LivrosRESTService,
+    LoginRESTService
   ],
   bootstrap: [AppComponent]
 })

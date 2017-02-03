@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BibliotecaService } from '../../service/biblioteca';
 import { LivroService } from '../../service/livro.service';
+import { LivrosRESTService } from '../../service/livros.rest.service';
 import { FormControl } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
 
@@ -14,9 +15,15 @@ export class DashboardComponent {
   livros;
   titulo = 'Dashboard';
 
-  constructor(lService: LivroService) {
-    this.livros = lService.consultarTodas();
+  constructor(lService: LivrosRESTService) {
+    lService.consultarTodos().subscribe(
+      ( data ) => { this.livros = data; }, //function sucesso
+      ( erro ) => { console.log(erro); } //function erro
+    );
   }
+  /*constructor(lService: LivroService) {
+    this.livros = lService.consultarTodas();
+  }*/
 
   receberTitulo(tituloIn) {
     alert('O titulo recebido é: ' + tituloIn);
